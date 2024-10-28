@@ -27,7 +27,7 @@ func load_with_cb(scene_path : String, loaded_cb : Callable, data := {}, has_pri
 
 func _run_loader_thread() -> void:
 	_is_running = true
-	var config = get_node("/root/AsyncLoaderConfig")
+	var config = AsyncLoaderConfig #get_node("/root/AsyncLoaderConfig")
 
 	while _is_running:
 		_to_load_mutex.lock()

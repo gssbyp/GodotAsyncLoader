@@ -58,7 +58,7 @@ func _get_queue_count() -> int:
 	return count
 
 func _run_adder_thread() -> void:
-	var config = get_node("/root/AsyncLoaderConfig")
+	var config = AsyncLoaderConfig #get_node("/root/AsyncLoaderConfig")
 	_is_running = true
 	var is_reset := false
 
@@ -90,7 +90,7 @@ func _run_adder_thread() -> void:
 		OS.delay_msec(config._thread_sleep_msec)
 
 func _add_entry(from : Array, group : String) -> bool:
-	var config = get_node("/root/AsyncLoaderConfig")
+	var config = AsyncLoaderConfig #get_node("/root/AsyncLoaderConfig")
 	var entry = from.pop_front()
 	if entry["is_child"]:
 		_add_entry_child(entry, group)

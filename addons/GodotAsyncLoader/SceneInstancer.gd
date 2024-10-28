@@ -26,7 +26,7 @@ func instance_with_cb(packed_scene : PackedScene, instanced_cb : Callable, data 
 
 func _run_instancer_thread() -> void:
 	_is_running = true
-	var config = get_node("/root/AsyncLoaderConfig")
+	var config = AsyncLoaderConfig #get_node("/root/AsyncLoaderConfig")
 
 	while _is_running:
 		_to_instance_mutex.lock()
@@ -46,5 +46,3 @@ func _run_instancer_thread() -> void:
 			instanced_cb.call_deferred(instance, data)
 
 		OS.delay_msec(config._thread_sleep_msec)
-
-

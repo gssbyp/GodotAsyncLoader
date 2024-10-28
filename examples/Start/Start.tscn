@@ -39,7 +39,7 @@ text = "Start Sync"
 
 [node name="Label" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "This will block the game while it loads the entire scene."
+text = "这将在加载整个场景时阻止游戏。"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
 layout_mode = 2
@@ -54,7 +54,7 @@ text = "Start Async"
 
 [node name="Label" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-text = "This won't block the game. It loads the scene in chunks."
+text = "这不会阻止游戏。它以块的形式加载场景。"
 
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer/StartSyncButton" to="." method="_on_StartSyncButton_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/VBoxContainer/StartAsyncButton" to="." method="_on_StartAsyncButton_pressed"]

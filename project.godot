@@ -12,13 +12,14 @@ config_version=5
 
 config/name="Godot Async Loader"
 run/main_scene="res://examples/Start/Start.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://examples/Singletons/Global.gd"
 AsyncLoader="*res://addons/GodotAsyncLoader/Singletons/AsyncLoader.gd"
+AsyncLoaderConfig="*res://addons/GodotAsyncLoader/Singletons/AsyncLoaderConfig.gd"
 
 [editor_plugins]
 
